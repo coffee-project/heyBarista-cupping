@@ -1,35 +1,63 @@
 <div fxLayout="column">
-    <!--<app-header></app-header>-->
-    <router-outlet></router-outlet>
-    <!--<app-footer></app-footer>-->
+    <div class="header-container header-layout-transparent">
+        <mdl-layout #mdlLayout1="mdlLayout">
 
-    <div class="header" fxLayout="row" fxLayoutAlign="space-between center">
+            <!-- header section only on desktop -->
+            <mdl-layout-header mdl-layout-header-transparent>
+                <mdl-layout-header-row>
+                    <mdl-layout-title>Title</mdl-layout-title>
+                    <mdl-layout-spacer></mdl-layout-spacer>
+                    <nav class="mdl-navigation">
+                        <a class="mdl-navigation__link" [routerLink]="['/hello']">Link 1</a>
+                        <a class="mdl-navigation__link" [routerLink]="['/other']">Link 2</a>
+                        <a class="mdl-navigation__link" [routerLink]="['/layout/l3']">Link 3</a>
+                    </nav>
+                </mdl-layout-header-row>
+            </mdl-layout-header>
+            <!-- header section only on desktop - end -->
 
+            <!-- drawer section -->
+            <mdl-layout-drawer>
+                <mdl-layout-title>Title</mdl-layout-title>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" [routerLink]="['/hello']" (click)="mdlLayout1.closeDrawer()">Link 1</a>
+                    <a class="mdl-navigation__link" [routerLink]="['/other']" (click)="mdlLayout1.closeDrawer()">Link 2</a>
+                    <a class="mdl-navigation__link" [routerLink]="['/layout/l3']" (click)="mdlLayout1.closeDrawer()">Link 3</a>
+                </nav>
+                <button mdl-button (click)="mdlLayout1.toggleDrawer()" mdl-button-type="raised" mdl-colored="primary">Toggle Drawer</button>
+            </mdl-layout-drawer>
+            <!-- drawer section - end -->
 
+            <!-- main content section -->
+            <mdl-layout-content>
+                <div fxLayout="row">
 
-        <md-toolbar color="primary">
-            <span>
-                {{title}}
-   </span>
+                    <div class="left" fxFlex="20">
+                        LEFT: 20% wide
+                    </div>
 
-            <!-- This fills the remaining space of the current row -->
-            <span class="example-fill-remaining-space"></span>
+                    <div class="right" fxFlex>
+                        <router-outlet></router-outlet>
+                    </div>
 
-            <button md-raised-button>   
+                    <div class="left" fxFlex="20">
+                        RIGHT: 20% wide
+                    </div>
 
+                </div>
 
-<md-icon>free_breakfast</md-icon>
+            </mdl-layout-content>
+            <!-- main content section - end -->
 
-
-            </button>
-        </md-toolbar>
-
-
-
+        </mdl-layout>
 
     </div>
+</div>
+<!--<app-footer></app-footer>-->
 
-    <div fxLayout="row">
+
+
+<!--<div fxLayout="row">
 
         <div class="left" fxFlex="20">
             LEFT: 20% wide
@@ -43,12 +71,4 @@
             RIGHT: 20% wide
         </div>
 
-    </div>
-</div>
-
-
-
-<h1>
-    {{title}}
-</h1>
-<router-outlet></router-outlet>
+    </div>-->
