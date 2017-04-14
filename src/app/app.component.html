@@ -30,13 +30,14 @@
 
             <!-- main content section -->
             <mdl-layout-content>
-                <div fxLayout="row">
+                <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex>
 
                     <div class="left" fxFlex="20">
                         LEFT: 20% wide
                     </div>
 
                     <div class="right" fxFlex>
+                        middle: 60% wide
                         <router-outlet></router-outlet>
                     </div>
 

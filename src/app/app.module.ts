@@ -15,7 +15,6 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 
 
-
 @NgModule({
   declarations: [
     AppComponent
@@ -32,7 +31,9 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase)
 
       ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
