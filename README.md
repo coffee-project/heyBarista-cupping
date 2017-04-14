@@ -1,4 +1,6 @@
-# HeyBaristaCupping
+# heyBarista! - cupping -
+
+[![Gitter](https://badges.gitter.im/angular/flex-layout.svg)](https://gitter.im/coffee-project/cupping-app)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
