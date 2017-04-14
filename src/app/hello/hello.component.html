@@ -1,0 +1,7 @@
+<ul class="thisCoffee">
+    <li *ngFor="let thisCoffee of coffees" (click)="onSelect(thisCoffee)" [class.selected]="thisCoffee === coffee">
+        {{thisCoffee.name}}
+    </li>
+</ul>
+
+<i class="fa fa-check"></i>

@@ -12,12 +12,20 @@ import 'hammerjs';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MdlModule } from '@angular-mdl/core';
 import { AngularFireModule } from 'angularfire2';
+
+import {InputTextModule, ButtonModule, ConfirmDialogModule} from 'primeng/primeng';
+
+
 import { environment } from '../environments/environment';
+import { CoffeeEditComponent } from './coffee-edit/coffee-edit.component';
+import { HelloComponent } from './hello/hello.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CoffeeEditComponent,
+    HelloComponent
   ],
   imports: [
     BrowserModule,
@@ -28,9 +36,11 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     FlexLayoutModule,
     MdlModule,
-    AngularFireModule.initializeApp(environment.firebase)
-
-      ],
+    AngularFireModule.initializeApp(environment.firebase),
+    InputTextModule,
+    ButtonModule,
+    ConfirmDialogModule
+    ],
   providers: [
 
   ],

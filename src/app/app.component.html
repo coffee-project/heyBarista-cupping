@@ -5,12 +5,12 @@
             <!-- header section only on desktop -->
             <mdl-layout-header mdl-layout-header-transparent>
                 <mdl-layout-header-row>
-                    <mdl-layout-title>Title</mdl-layout-title>
+                    <mdl-layout-title>Cupping App</mdl-layout-title>
                     <mdl-layout-spacer></mdl-layout-spacer>
                     <nav class="mdl-navigation">
-                        <a class="mdl-navigation__link" [routerLink]="['/hello']">Link 1</a>
-                        <a class="mdl-navigation__link" [routerLink]="['/other']">Link 2</a>
-                        <a class="mdl-navigation__link" [routerLink]="['/layout/l3']">Link 3</a>
+                        <a class="mdl-navigation__link" [routerLink]="['/hello']">Hello</a>
+                        <a class="mdl-navigation__link" [routerLink]="['/coffee-edit']">Coffee</a>
+                        <!--<a class="mdl-navigation__link" [routerLink]="['/layout/l3']">Link 3</a>-->
                     </nav>
                 </mdl-layout-header-row>
             </mdl-layout-header>
@@ -18,11 +18,11 @@
 
             <!-- drawer section -->
             <mdl-layout-drawer>
-                <mdl-layout-title>Title</mdl-layout-title>
+                <mdl-layout-title>Cupping App</mdl-layout-title>
                 <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" [routerLink]="['/hello']" (click)="mdlLayout1.closeDrawer()">Link 1</a>
-                    <a class="mdl-navigation__link" [routerLink]="['/other']" (click)="mdlLayout1.closeDrawer()">Link 2</a>
-                    <a class="mdl-navigation__link" [routerLink]="['/layout/l3']" (click)="mdlLayout1.closeDrawer()">Link 3</a>
+                    <a class="mdl-navigation__link" [routerLink]="['/hello']" (click)="mdlLayout1.closeDrawer()">Hello</a>
+                    <a class="mdl-navigation__link" [routerLink]="['/coffee-edit']" (click)="mdlLayout1.closeDrawer()">Coffee</a>
+                    <!--<a class="mdl-navigation__link" [routerLink]="['/layout/l3']" (click)="mdlLayout1.closeDrawer()">Link 3</a>-->
                 </nav>
                 <button mdl-button (click)="mdlLayout1.toggleDrawer()" mdl-button-type="raised" mdl-colored="primary">Toggle Drawer</button>
             </mdl-layout-drawer>
