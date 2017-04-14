@@ -6,6 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { MaterialModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import 'hammerjs';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -14,8 +21,11 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule
+      ],
   providers: [],
   bootstrap: [AppComponent]
 })
