@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Coffee } from './shared';
 
 @Component({
   selector: 'cupping-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'cupping works!';
+  title = 'Cupping App';
+
 }
+
